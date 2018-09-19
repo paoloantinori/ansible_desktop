@@ -1,0 +1,58 @@
+# This playbook makes the RPMFusion (http://rpmfusion.org/) repository available.
+#
+# Copyright (c) 2013-2014 Fabian Affolter <fabian@affolter-engineering.ch>
+#
+# Licensed under CC BY 3.0. All rights reserved.
+#
+---
+- name: import gpg keys
+  rpm_key:
+    state: present
+    key: "{{ item }}"
+  with_items:
+    - http://apt.sw.be/RPM-GPG-KEY.dag.txt
+- name: install repos packages
+  dnf: name={{ item }}
+       state=present
+  with_items:
+    - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_current }}.noarch.rpm
+    - http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_current }}.noarch.rpm
+    - https://github.com/UnitedRPMs/unitedrpms/releases/download/8/unitedrpms-{{ fedora_current }}-8.fc{{ fedora_current }}.noarch.rpm
+- name: vscode - add repo
+  yum_repository:
+    name: code
+    description: Visual Studio Code
+    gpgcheck: yes
+    enabled: yes
+    file: vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+- name: chrome - add google repository
+  yum_repository:
+    name: google-chrome
+    description: google-chrome - $basearch
+    gpgcheck: yes
+    enabled: yes
+    gpgkey: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/$basearch
+- name: virtualbox - add repository
+  yum_repository:
+    name: VirtualBox
+    description: VirtualBox - $basearch
+    enabled: yes
+    baseurl: http://public-yum.oracle.com/repo/OracleLinux/OL7/addons/x86_64/$basearch
+    exclude: docker-engine
+    includepkgs: VirtualBox*
+- name: Bcompare - add repository
+  yum_repository:
+    name: bcompare
+    description: VirtualBox - $basearch
+    enabled: yes
+    baseurl: http://www.scootersoftware.com/bcompare4
+- name: Bcompare - add repository
+  yum_repository:
+    name: bcompare
+    description: VirtualBox - $basearch
+    enabled: yes
+    baseurl: http://www.scootersoftware.com/bcompare4
+

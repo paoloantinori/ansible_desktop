@@ -1,0 +1,23 @@
+# This files contains system handlers for Fedora.
+#
+# Copyright (c) 2013-2017 Fabian Affolter <fabian@affolter-engineering.ch>
+#
+# Licensed under CC BY 3.0. All rights reserved.
+#
+# Usage:
+#  handlers:
+#    - include: handlers/system.yml
+#
+---
+- name: reboot the system
+  command: /usr/sbin/reboot
+
+- name: shutdown the system
+  command: /usr/sbin/poweroff
+
+- name: reload firewalld
+  command: /usr/bin/firewall-cmd --reload
+
+- name: reload systemd
+  command: /usr/bin/systemctl --system daemon-reload
+
