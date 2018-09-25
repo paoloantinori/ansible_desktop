@@ -6,6 +6,6 @@
 #
 ---
 - name: update all packages
-  package:
+  dnf:
     name: "*"
     state: latest

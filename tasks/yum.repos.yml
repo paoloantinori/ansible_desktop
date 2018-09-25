@@ -10,7 +10,7 @@
     state: present
     key: "{{ item }}"
   with_items:
-    - http://apt.sw.be/RPM-GPG-KEY.dag.txt
+    - https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/URPMS-GPG-PUBLICKEY-Fedora-24
 - name: install repos packages
   dnf: name={{ item }}
        state=present
@@ -40,19 +40,20 @@
     name: VirtualBox
     description: VirtualBox - $basearch
     enabled: yes
-    baseurl: http://public-yum.oracle.com/repo/OracleLinux/OL7/addons/x86_64/$basearch
+    baseurl: http://public-yum.oracle.com/repo/OracleLinux/OL7/addons/$basearch
     exclude: docker-engine
     includepkgs: VirtualBox*
 - name: Bcompare - add repository
   yum_repository:
     name: bcompare
-    description: VirtualBox - $basearch
+    description: Bcompare - $basearch
     enabled: yes
     baseurl: http://www.scootersoftware.com/bcompare4
-- name: Bcompare - add repository
+- name: Bluejeans - add repository
   yum_repository:
-    name: bcompare
-    description: VirtualBox - $basearch
+    name: bluejeans
+    description: 'Blue Jeans Network, Inc. - $basearch software and updates'
     enabled: yes
-    baseurl: http://www.scootersoftware.com/bcompare4
-
+    baseurl: https://swdl.bluejeans.com/repos/bluejeans/$basearch/release/rpm
+    gpgkey: "https://swdl.bluejeans.com/repos/bluejeans/bjn-key"
+    gpgcheck: yes
