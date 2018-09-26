@@ -1,0 +1,6 @@
+---
+- name: Modify inotify
+  lineinfile:
+    path: /etc/sysctl.conf
+    line: 'fs.inotify.max_user_watches=524288'
+    create: yes

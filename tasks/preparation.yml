@@ -9,3 +9,7 @@
   dnf:
     name: "*"
     state: latest
+- name: Install roles from Ansible Galaxy
+  command: ansible-galaxy install -v -p /usr/share/ansible/roles {{ item }}
+  with_items:
+    - "{{ ansible_roles }}"

@@ -48,6 +48,7 @@ packages:
   - kernel-devel
   - kmod
   - libreoffice
+  - libselinux-python
   - lsof
   - make
   - meld
@@ -94,6 +95,7 @@ packages:
   - which
   - wireshark
   - x264
+  - xdotool
   - zsh
   - https://www.r-studio.com/downloads/RStudio4_x64.rpm
 

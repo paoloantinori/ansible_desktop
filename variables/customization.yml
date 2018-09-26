@@ -1,0 +1,12 @@
+# This variables file contains the default password for system, user, and
+# database accounts.
+#
+# Copyright (c) 2013 Fabian Affolter <fabian@affolter-engineering.ch>
+#
+# Licensed under CC BY 3.0. All rights reserved.
+#
+# For the Ansible examples:
+# python -c 'import crypt; print crypt.crypt("Password", "$1$SomeSalt$")'
+---
+# Hostname
+non_root_user: pantinor

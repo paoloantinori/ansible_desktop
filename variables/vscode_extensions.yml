@@ -1,0 +1,26 @@
+vscode_extensions:
+- alefragnani.bookmarks
+- vscjava.vscode-java-debug
+- coenraads.bracket-pair-colorizer
+- eamodio.gitlens
+- ms-vscode.go
+- spywhere.guides
+- rsbondi.highlight-words
+- vscjava.vscode-java-pack
+- vscjava.vscode-java-test
+- eriklynd.json-tools
+- camel-tooling.vscode-apache-camel
+- redhat.java
+- emilast.logfilehighlighter
+- vscjava.vscode-maven
+- ziyasal.vscode-open-in-github
+- rubymaniac.vscode-paste-and-indent
+- quicktype.quicktype
+- christian-kohler.path-intellisense
+- ms-python.python
+- ban.spellright
+- ms-vsliveshare.vsliveshare
+- robertohuertasm.vscode-icons
+- redhat.vscode-xml
+- dotjoshjohnson.xml
+- redhat.vscode-yaml

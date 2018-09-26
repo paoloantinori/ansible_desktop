@@ -13,15 +13,30 @@
   user: root
   vars_files:
     - variables/application-versions.yml
-    - variables/sensitive.yml
+    - variables/ansible_roles.yml
+    - variables/customization.yml
+    - variables/packages.yml
+    - variables/vscode_extensions.yml
 
   tasks:
     - include: tasks/preparation.yml  
     - include: tasks/yum.repos.yml  
 #    - include: tasks/gh.repos.yml  
-    - include: tasks/packages.yml  
+    - include: tasks/packages.yml
+    - include: tasks/roles.yml
+    - include: tasks/configuration.yml
     - include: tasks/cleanup.yml
+
+        
+
+  # roles:
+  # - role: gantsign.visual-studio-code-extensions
+  #   users:
+  #     - username: pantinor
+  #       visual_studio_code_extensions:
+  #         - streetsidesoftware.code-spell-checker
 
   handlers:
    - include: handlers/system.yml
    - include: handlers/services.yml
+
