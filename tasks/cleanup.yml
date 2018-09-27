@@ -7,3 +7,10 @@
 ---
 - name: reload firewall configuration
   command: /usr/bin/firewall-cmd --reload
+- name: change repos permissions
+  file:
+    path: /data/repo/apps
+    owner: "{{ non_root_user }}"
+    group: "{{ non_root_user }}"
+    recurse: yes
+    

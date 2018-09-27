@@ -1,0 +1,6 @@
+---
+- name: Clone Github repositories
+  git:
+    repo: "{{ item.url }}"
+    dest: /data/repo/apps/{{ item.name }}
+  loop: "{{ github_repos }}"

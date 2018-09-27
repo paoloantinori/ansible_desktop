@@ -12,13 +12,13 @@ packages:
   - boxes
   - buildah
   - calibre
-  - california
   - ccze
   - chromium-freeworld
   - chromium-freeworld-libs
   - chromium-freeworld-libs-media
   - chromium-pepper-flash
   - chromium-widevine
+  - chrome-gnome-shell
   - code
   - curl
   - dnsmasq
@@ -33,6 +33,7 @@ packages:
   - gimp
   - git
   - glusterfs
+  - gnome-tweak-tool
   - golang
   - google-chrome-stable
   - gstreamer

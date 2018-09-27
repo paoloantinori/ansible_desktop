@@ -17,6 +17,8 @@
     - variables/customization.yml
     - variables/packages.yml
     - variables/vscode_extensions.yml
+    - variables/gnome_extensions.yml
+    - variables/github_repos.yml
 
   tasks:
     - include: tasks/preparation.yml  
@@ -25,6 +27,7 @@
     - include: tasks/packages.yml
     - include: tasks/roles.yml
     - include: tasks/configuration.yml
+    - include: tasks/github.yml
     - include: tasks/cleanup.yml
 
         

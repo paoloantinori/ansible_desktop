@@ -1,0 +1,5 @@
+github_repos:
+- { name: bash-git-prompt, url: "https://github.com/magicmonty/bash-git-prompt.git" }
+- { name: cheat.sh, url: "https://github.com/chubin/cheat.sh.git" }
+- { name: desktop-maven-notifier, url: "https://github.com/rombert/desktop-maven-notifier.git" }
+- { name: v4l2loopback, url: "https://github.com/umlaeute/v4l2loopback" }

@@ -6,4 +6,9 @@
     users:
       - username: pantinor
         visual_studio_code_extensions: "{{ vscode_extensions }}"
-          
+
+- name: Invoke Gnome Extensions installer
+  include_role:
+    name: ansible-gnome-extensions
+  vars:
+    gnome_extensions_ids: "{{ gnome_extensions_ids }}"          
