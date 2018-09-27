@@ -1,5 +1,10 @@
 github_repos:
-- { name: bash-git-prompt, url: "https://github.com/magicmonty/bash-git-prompt.git" }
-- { name: cheat.sh, url: "https://github.com/chubin/cheat.sh.git" }
 - { name: desktop-maven-notifier, url: "https://github.com/rombert/desktop-maven-notifier.git" }
 - { name: v4l2loopback, url: "https://github.com/umlaeute/v4l2loopback" }
+# the following is for application I want to have available on my cli
+github_apps_repos:
+- { name: bash-git-prompt, url: "https://github.com/magicmonty/bash-git-prompt.git" }
+- { name: cheat.sh, url: "https://github.com/chubin/cheat.sh.git" }
+- { name: z, url: "https://github.com/rupa/z" }
+personal_github_repos:
+- { name: h, url: "https://github.com/paoloantinori/hhighlighter" }
