@@ -11,4 +11,22 @@
   include_role:
     name: ansible-gnome-extensions
   vars:
-    gnome_extensions_ids: "{{ gnome_extensions_ids }}"          
+    gnome_extensions_ids: "{{ gnome_extensions_ids }}"
+
+- name: Invoke SDKMAN
+  include_role: 
+    name: ansible-sdkman
+  vars:
+    sdkman_dir: /data/sw/sdkman
+    sdkman_auto_answer: true
+    sdkman_auto_selfupdate: true
+    sdkman_install_packages:
+      - { candidate: maven , version: "" }
+    sdkman_flush_caches_before:
+      - temp
+    sdkman_flush_caches_after:
+      - archives
+      - broadcast
+      - candidates
+      - temp
+
