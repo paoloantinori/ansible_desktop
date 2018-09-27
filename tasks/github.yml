@@ -4,3 +4,13 @@
     repo: "{{ item.url }}"
     dest: /data/repo/apps/{{ item.name }}
   loop: "{{ github_repos }}"
+- name: Install GH based apps
+  git:
+    repo: "{{ item.url }}"
+    dest: /data/sw/{{ item.name }}
+  loop: "{{ github_apps_repos }}"
+- name: Install personal gh repos
+  git:
+    repo: "{{ item.url }}"
+    dest: /data/repo/github/personal/{{ item.name }}
+  loop: "{{ personal_github_repos }}"
