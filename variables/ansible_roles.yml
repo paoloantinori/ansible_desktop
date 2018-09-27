@@ -1,3 +1,4 @@
 ansible_roles:
   - "git+https://github.com/gantsign/ansible-role-visual-studio-code-extensions"
   - "git+https://github.com/jaredhocutt/ansible-gnome-extensions"
+  - "git+https://github.com/Comcast/ansible-sdkman"
