@@ -4,3 +4,37 @@
     path: /etc/sysctl.conf
     line: 'fs.inotify.max_user_watches=524288'
     create: yes
+
+- name: Add sdkman in .bashrc
+  blockinfile:
+    dest: /home/{{ non_root_user }}/.bashrc
+    marker: "## {mark} sdkman added by Ansible"
+    block: |
+      # Source sdkman
+      if [ -f /data/sw/sdkman/bin/sdkman-init.sh ]; then
+        export SDKMAN_DIR=/data/sw/sdkman
+        source /data/sw/sdkman/bin/sdkman-init.sh
+      fi
+
+- name: Add z in .bashrc
+  blockinfile:
+    dest: /home/{{ non_root_user }}/.bashrc
+    marker: "## {mark} z added by Ansible"
+    block: |
+      # init z https://github.com/rupa/z
+      if [ -f /data/sw/z/z.sh ]; then
+        source /data/sw/z/z.sh
+        export MANPATH=$MANPATH:/data/sw/z
+      fi
+  
+- name: Add bash-git-prompt in .bashrc
+  blockinfile:
+    dest: /home/{{ non_root_user }}/.bashrc
+    marker: "## {mark} bash-git-prompt added by Ansible"
+    block: |
+      export GIT_PROMPT_ONLY_IN_REPO=1
+      export GIT_PROMPT_THEME=Custom
+      if [ -f /data/sw/bash-git-prompt/gitprompt.sh ]; then
+        source /data/sw/bash-git-prompt/gitprompt.sh
+      fi
+
