@@ -50,6 +50,7 @@ packages:
   - jq
   - kernel-devel
   - kmod
+  - libvirtd
   - libreoffice
   - libselinux-python
   - lsof
