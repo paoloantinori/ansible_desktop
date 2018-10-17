@@ -24,6 +24,7 @@ packages:
   - dnsmasq
   - docker
   - easystroke
+  - firefox-wayland
   - ffmpeg
   - flashplugin
   - fpaste
