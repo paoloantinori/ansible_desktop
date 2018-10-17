@@ -41,6 +41,7 @@ packages:
   - hdf5
   - htop
   - hub
+  - levien-inconsolata-fonts
   - iotop
   - iptables
   - jad
@@ -95,6 +96,7 @@ packages:
   - wget
   - which
   - wireshark
+  - xclipe
   - x264
   - xdotool
   - zsh
