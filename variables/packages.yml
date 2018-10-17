@@ -1,6 +1,4 @@
 packages:
-  - VirtualBox
-  - WoeUSB
   - ack
   - amule
   - asciinema
@@ -13,19 +11,19 @@ packages:
   - buildah
   - calibre
   - ccze
+  - chrome-gnome-shell
   - chromium-freeworld
   - chromium-freeworld-libs
   - chromium-freeworld-libs-media
   - chromium-pepper-flash
   - chromium-widevine
-  - chrome-gnome-shell
   - code
   - curl
   - dnsmasq
   - docker
   - easystroke
-  - firefox-wayland
   - ffmpeg
+  - firefox-wayland
   - flashplugin
   - fpaste
   - fuse
@@ -40,9 +38,10 @@ packages:
   - gstreamer
   - gtk3
   - hdf5
+  - hexchat
   - htop
+  - https://www.r-studio.com/downloads/RStudio4_x64.rpm
   - hub
-  - levien-inconsolata-fonts
   - iotop
   - iptables
   - jad
@@ -50,9 +49,10 @@ packages:
   - jq
   - kernel-devel
   - kmod
-  - libvirtd
+  - levien-inconsolata-fonts
   - libreoffice
   - libselinux-python
+  - libvirtd
   - lsof
   - make
   - meld
@@ -84,9 +84,9 @@ packages:
   - stress
   - subversion
   - tcping
+  - tcping
   - terminator
   - the_silver_searcher
-  - tcping
   - tig
   - tilix
   - tmux
@@ -94,13 +94,14 @@ packages:
   - unrar
   - vim-minimal
   - virt-manager
+  - VirtualBox
   - vlc
   - wget
   - which
   - wireshark
-  - xclip
+  - WoeUSB
   - x264
+  - xclip
   - xdotool
   - zsh
-  - https://www.r-studio.com/downloads/RStudio4_x64.rpm
 
