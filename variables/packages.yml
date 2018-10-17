@@ -96,7 +96,7 @@ packages:
   - wget
   - which
   - wireshark
-  - xclipe
+  - xclip
   - x264
   - xdotool
   - zsh
